@@ -9,13 +9,13 @@ import torch
 import torch.nn.functional as F
 import torch.optim as optim
 
-BUFFER_SIZE = int(1e6)  # replay buffer size
+BUFFER_SIZE = int(1e5)  # replay buffer size
 BATCH_SIZE = 128        # minibatch size
 GAMMA = 0.99            # discount factor
 TAU = 1e-3              # for soft update of target parameters
-LR_ACTOR = 1e-4         # learning rate of the actor 
-LR_CRITIC = 3e-4        # learning rate of the critic
-WEIGHT_DECAY = 0.0001   # L2 weight decay
+LR_ACTOR = 5e-3         # learning rate of the actor 
+LR_CRITIC = 5e-3        # learning rate of the critic
+WEIGHT_DECAY = 0.0001   # L2 weight decay for learning rate
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
